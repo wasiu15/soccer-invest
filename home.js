@@ -1,9 +1,244 @@
-var currentDayNumber = 3, 
+var currentDayNumber = 1, 
 currentDay = document.getElementById("currentDay");
 currentDay.innerHTML = `Day ${currentDayNumber} Of 7`
 var currentPageIndex = 0,
 prevBtn = document.getElementById("prevBtn"),
 nextBtn = document.getElementById("nextBtn");
+
+/////   EMPTY TEMPLATE FOR PENDING
+/*
+{
+  week : 0,
+  weekStatus : {
+    Investment_Status: "Pending...",
+    Profit_Percent: "Pending...",
+    Default_Capital: "$1,000",
+    Total_Return: "Pending...",
+    Profit_Made: "Pending..."
+  },
+  games : [
+  {
+    day_profit: "$45",
+    game1 : {
+      day : "Sunday 21 11 2021",
+      league : "Mexico - Liga Apertura. 04:00",
+      team1 : "Puebla",
+      team2 : "Guadalajara-Chi",
+      price : "$90",
+      pick : "Over 1.5",
+      odd : "1.5",
+      game_status : "finished"
+    },
+    game2 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Not Needed",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game3 : {
+     league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Not Needed",
+      odd : "",
+      game_status : "not-needed"
+    }
+  },
+  {
+    day_profit: "$",
+    game1 : {
+      day : "Monday 22 11 2021",
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game2 : {
+     league : "Japan, J. League 2.  05:00",
+     team1 : "Team 1",
+     team2 : "Team 2",
+     price : "",
+     pick : "Pending...",
+     odd : "",
+     game_status : "not-needed"
+    },
+    game3 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    }
+  },
+  {
+    day_profit: "$",
+    game1 : {
+      day : "Tuesday 23 11 2021",
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game2 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game3 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    }
+  },
+  {
+    day_profit: "$",
+    game1 : {
+      day : "Wednesday 24 11 2021",
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game2 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game3 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    }
+  },
+  {
+    day_profit: "$",
+    game1 : {
+      day : "Thursday 25 11 2021",
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game2 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game3 : {
+      day : "Thursday 25 11 2021",
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    }
+  },
+  {
+    day_profit: "$",
+    game1 : {
+      day : "Friday 26 11 2021",
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game2 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game3 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    }
+  },
+  {
+    day_profit: "$",
+    game1 : {
+      day : "Saturday 27 11 2021",
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game2 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    },
+    game3 : {
+      league : "Japan, J. League 2.  05:00",
+      team1 : "Team 1",
+      team2 : "Team 2",
+      price : "",
+      pick : "Pending...",
+      odd : "",
+      game_status : "not-needed"
+    }
+  }]
+}
+*/
+/////   EMPTY TEMPLATE FOR PENDING
+
 
 var allWeeksGames = [
   {
@@ -14,6 +249,235 @@ var allWeeksGames = [
       Default_Capital: "$1,000",
       Total_Return: "Pending...",
       Profit_Made: "Pending..."
+    },
+    games : [
+    {
+      day_profit: "$45",
+      game1 : {
+        day : "Sunday 21 11 2021",
+        league : "Mexico - Liga Apertura. 04:00",
+        team1 : "Puebla",
+        team2 : "Guadalajara-Chi",
+        price : "$90",
+        pick : "Over 1.5",
+        odd : "1.5",
+        game_status : "finished"
+      },
+      game2 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Not Needed",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game3 : {
+       league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Not Needed",
+        odd : "",
+        game_status : "not-needed"
+      }
+    },
+    {
+      day_profit: "$",
+      game1 : {
+        day : "Monday 22 11 2021",
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game2 : {
+       league : "Japan, J. League 2.  05:00",
+       team1 : "Team 1",
+       team2 : "Team 2",
+       price : "",
+       pick : "Pending...",
+       odd : "",
+       game_status : "not-needed"
+      },
+      game3 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      }
+    },
+    {
+      day_profit: "$",
+      game1 : {
+        day : "Tuesday 23 11 2021",
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game2 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game3 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      }
+    },
+    {
+      day_profit: "$",
+      game1 : {
+        day : "Wednesday 24 11 2021",
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game2 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game3 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      }
+    },
+    {
+      day_profit: "$",
+      game1 : {
+        day : "Thursday 25 11 2021",
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game2 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game3 : {
+        day : "Thursday 25 11 2021",
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      }
+    },
+    {
+      day_profit: "$",
+      game1 : {
+        day : "Friday 26 11 2021",
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game2 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game3 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      }
+    },
+    {
+      day_profit: "$",
+      game1 : {
+        day : "Saturday 27 11 2021",
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game2 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      },
+      game3 : {
+        league : "Japan, J. League 2.  05:00",
+        team1 : "Team 1",
+        team2 : "Team 2",
+        price : "",
+        pick : "Pending...",
+        odd : "",
+        game_status : "not-needed"
+      }
+    }]
+  },
+  {
+    week : -1,
+    weekStatus : {
+      Investment_Status: "Completed",
+      Profit_Percent: "39%",
+      Default_Capital: "$1,000",
+      Total_Return: "$1,393",
+      Profit_Made: "$393"
     },
     games : [
     {
@@ -110,85 +574,85 @@ var allWeeksGames = [
       }
     },
     {
-      day_profit: "$",
+      day_profit: "$30",
       game1 : {
-        day : "Wednesday 16 11 2021",
-        league : "Poland - 1. Division.  08:30",
+        day : "Wednesday 17 11 2021",
+        league : "Poland, 1. Division.  08:30",
         team1 : "Gremio Porto",
         team2 : "Fluminense",
         price : "$90",
         pick : "Over 2.5",
         odd : "1.8",
-        game_status : "not-needed"
+        game_status : "failed"
       },
       game2 : {
-        league : "Japan, J. League 2.  05:00",
-        team1 : "Team 1",
-        team2 : "Team 2",
-        price : "",
-        pick : "Pending...",
-        odd : "",
-        game_status : "not-needed"
+        league : "Qatar, Stars Cup.  23:10",
+        team1 : "Al-Shamal",
+        team2 : "Al Rayyan SC",
+        price : "240",
+        pick : "over 1.5 & 1/2",
+        odd : "1.5",
+        game_status : "finished"
       },
       game3 : {
         league : "Japan, J. League 2.  05:00",
         team1 : "Team 1",
         team2 : "Team 2",
         price : "",
-        pick : "Pending...",
+        pick : "Not Needed",
         odd : "",
         game_status : "not-needed"
       }
     },
     {
-      day_profit: "$",
+      day_profit: "$25",
       game1 : {
-        day : "Thursday 17 11 2021",
-        league : "Japan, J. League 2.  05:00",
-        team1 : "Team 1",
-        team2 : "Team 2",
-        price : "",
-        pick : "Pending...",
-        odd : "",
-        game_status : "not-needed"
+        day : "Thursday 18 11 2021",
+        league : "Poland - 1. Division.  18:00",
+        team1 : "Sandecja Nowy",
+        team2 : "Czestochowa",
+        price : "$90",
+        pick : "over 1.5 & 1/2",
+        odd : "1.6",
+        game_status : "failed"
       },
       game2 : {
-        league : "Japan, J. League 2.  05:00",
-        team1 : "Team 1",
-        team2 : "Team 2",
-        price : "",
-        pick : "Pending...",
-        odd : "",
-        game_status : "not-needed"
+        league : "Sweden - 2 Division Norrland.  19:30",
+        team1 : "Taftea IK",
+        team2 : "Skelleftea FF",
+        price : "$240",
+        pick : "over 1.5 & 1/2",
+        odd : "1.48",
+        game_status : "finished"
       },
       game3 : {
         league : "Japan, J. League 2.  05:00",
         team1 : "Team 1",
         team2 : "Team 2",
         price : "",
-        pick : "Pending...",
+        pick : "Not Needed",
         odd : "",
         game_status : "not-needed"
       }
     },
     {
-      day_profit: "$",
+      day_profit: "$45",
       game1 : {
-        day : "Friday 18 11 2021",
-        league : "Japan, J. League 2.  05:00",
-        team1 : "Team 1",
-        team2 : "Team 2",
-        price : "",
-        pick : "Pending...",
-        odd : "",
-        game_status : "not-needed"
+        day : "Friday 19 11 2021",
+        league : "Egypt - Premier League.  14:00",
+        team1 : "Pharco Fc",
+        team2 : "El Makasa",
+        price : "$90",
+        pick : "over 1.5 & 1/2",
+        odd : "1.5",
+        game_status : "finished"
       },
       game2 : {
         league : "Japan, J. League 2.  05:00",
         team1 : "Team 1",
         team2 : "Team 2",
         price : "",
-        pick : "Pending...",
+        pick : "Not Needed",
         odd : "",
         game_status : "not-needed"
       },
@@ -197,29 +661,29 @@ var allWeeksGames = [
         team1 : "Team 1",
         team2 : "Team 2",
         price : "",
-        pick : "Pending...",
+        pick : "Not Needed",
         odd : "",
         game_status : "not-needed"
       }
     },
     {
-      day_profit: "$",
+      day_profit: "$34",
       game1 : {
-        day : "Saturday 19 11 2021",
-        league : "Japan, J. League 2.  05:00",
-        team1 : "Team 1",
-        team2 : "Team 2",
-        price : "",
-        pick : "Pending...",
-        odd : "",
-        game_status : "not-needed"
+        day : "Saturday 20 11 2021",
+        league : "Colombia - Primera B.  02:00",
+        team1 : "Fortaleza FC",
+        team2 : "Llaneros",
+        price : "$90",
+        pick : "1/2",
+        odd : "1.38",
+        game_status : "finished"
       },
       game2 : {
         league : "Japan, J. League 2.  05:00",
         team1 : "Team 1",
         team2 : "Team 2",
         price : "",
-        pick : "Pending...",
+        pick : "Not Needed",
         odd : "",
         game_status : "not-needed"
       },
@@ -228,14 +692,14 @@ var allWeeksGames = [
         team1 : "Team 1",
         team2 : "Team 2",
         price : "",
-        pick : "Pending...",
+        pick : "Not Needed",
         odd : "",
         game_status : "not-needed"
       }
     }]
   },
   {
-    week : -1,
+    week : -2,
     weekStatus : {
       Investment_Status: "Completed",
       Profit_Percent: "40%",
@@ -463,7 +927,7 @@ var allWeeksGames = [
       }]
   },
   {
-    week : -2,
+    week : -3,
     weekStatus : {
       Investment_Status: "Completed",
       Profit_Percent: "40.5%",
@@ -693,7 +1157,7 @@ var allWeeksGames = [
     }]
   },
   {
-    week : -3,
+    week : -4,
     weekStatus : {
       Investment_Status: "Completed",
       Profit_Percent: "42.6%",
@@ -921,7 +1385,7 @@ var allWeeksGames = [
     }]
   },
   {
-    week : -4,
+    week : -5,
     weekStatus : {
       Investment_Status: "Completed",
       Profit_Percent: "40.7%",
