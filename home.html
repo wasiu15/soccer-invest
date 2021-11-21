@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/bet-icon.gif">
+    <link rel="stylesheet" href="home.css">
+
+    
+</head>
+<body>
+    <div class="home-container" style="opacity: 1;">
+        <br />
+        <div class="header">
+            <a href="#">SoccerVista - Investment</a>
+            <br />
+            <p>Welcome! Our aim is to double your capital per week. <br /> Steady and Consistent is the key. <a href="facts.html" style="font-size: 14px; color: green;">learn more</a></p>
+            <br />
+        </div>
+        <div class="day-navigator">
+            <button id="prevBtn" style="background : url(assets/arrow-prev.png); background-repeat:no-repeat" onclick="onPrev()"></button>
+            <p id="currentDay">Day 1 of 7</p>
+            <button id="nextBtn" style="opacity: 0; background : url(assets/arrow-next.png); background-repeat:no-repeat" onclick="onNext()"></button>
+        </div>
+        <div class="game-container">
+            <div class="game-box">
+                <div class="game-date reduce-padding">Tuesday 04 11o 2021</div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="failed">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+                
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="finished">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="not-needed">Not Needed</p>
+                    <p>1.15</p>
+                </div>
+                <div class="daily-profit">
+                    <p style="border: none;">Profit Made Today: <span>$50</span></p>
+                </div>
+            </div>
+            <div class="game-box">
+                <div class="game-date">Tuesday 04 11 2021</div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="failed">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+                
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="finished">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="not-needed">Not Needed</p>
+                    <p>1.15</p>
+                </div>
+                <div class="daily-profit">
+                    <p style="border: none;">Profit Made Today: <span>$50</span></p>
+                </div>
+            </div>
+            <div class="game-box">
+                <div class="game-date">Tuesday 04 11 2021</div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="failed">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+                
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="finished">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="not-needed">Not Needed</p>
+                    <p>1.15</p>
+                </div>
+                <div class="daily-profit">
+                    <p style="border: none;">Profit Made Today: <span>$50</span></p>
+                </div>
+            </div>
+            <div class="game-box">
+                <div class="game-date">Tuesday 04 11 2021</div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="failed">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+                
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="finished">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="not-needed">Not Needed</p>
+                    <p>1.15</p>
+                </div>
+                <div class="daily-profit">
+                    <p style="border: none;">Profit Made Today: <span>$50</span></p>
+                </div>
+            </div>
+            <div class="game-box">
+                <div class="game-date">Tuesday 04 11 2021</div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="failed">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+                
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="finished">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="not-needed">Not Needed</p>
+                    <p>1.15</p>
+                </div>
+                <div class="daily-profit">
+                    <p style="border: none;">Profit Made Today: <span>$50</span></p>
+                </div>
+            </div>
+            <div class="game-box">
+                <div class="game-date">Tuesday 04 11 2021</div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="failed">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+                
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="finished">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="not-needed">Not Needed</p>
+                    <p>1.15</p>
+                </div>
+                <div class="daily-profit">
+                    <p style="border: none;">Profit Made Today: <span>$50</span></p>
+                </div>
+            </div>
+            <div class="game-box">
+                <div class="game-date">Tuesday 04 11 2021</div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="failed">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+                
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="finished">Under 4.5</p>
+                    <p>1.15</p>
+                </div>
+
+                <div class="other-game reduce-padding"></div>
+                <div class="game-league">Belgium, Pro League.  20:30</div>
+                <div class="teams-box">
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <div class="game-box-footer">
+                    <p>$100</p>
+                    <p class="not-needed">Not Needed</p>
+                    <p>1.15</p>
+                </div>
+                <div class="daily-profit">
+                    <p style="border: none;">Profit Made Today: <span>$50</span></p>
+                </div>
+            </div>
+
+            <div class="week-result">
+                <p class="week-summary"><u>WEEK SUMMARY</u></p>
+                <p>Investment Status: <span>Pending...</span></p>
+                <p>Profit Percent: <span>Pending...</span></p>
+                <p>Default Capital: <span>$100</span></p>
+                <p>Total Return: <span>Pending...</span></p>
+                <p>Profit Made: <span>Pending...</span></p>
+            </div>
+            <br />
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function(){
+        if(sessionStorage.getItem("current_page") !== "auth"){
+            window.location="index.html";
+            return
+        } else {
+            var home_container_div = document.querySelector(".home-container");
+            home_container_div.style.opacity = 1;
+        }
+        sessionStorage.setItem("current_page", "login");
+    }
+</script>
+    <script src="home.js"></script>
+</html>
