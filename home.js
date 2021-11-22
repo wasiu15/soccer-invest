@@ -295,12 +295,12 @@ var allWeeksGames = [
         game_status : "failed"
       },
       game2 : {
-       league : "Slovenia - Prva Liga.  15:00",
-       team1 : "NK Domzale",
-       team2 : "NK Celje",
+       league : "Spain - Laliga2.  21:00",
+       team1 : "Zaragoza",
+       team2 : "Leganes",
        price : "$240",
-       pick : "Over 1.5 & 1/2",
-       odd : "1.67",
+       pick : "Over 1.5",
+       odd : "1.57",
        game_status : "not-needed"
       },
       game3 : {
