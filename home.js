@@ -286,7 +286,7 @@ var allWeeksGames = [
       day_profit: "$",
       game1 : {
         day : "Monday 22 11 2021",
-        league : "Iran - Azadegan League.  05:00",
+        league : "Iran - Azadegan League.  11:45",
         team1 : "Arman Gohar",
         team2 : "Qashqai Shiraz",
         price : "$90",
