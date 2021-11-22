@@ -292,15 +292,15 @@ var allWeeksGames = [
         price : "$90",
         pick : "Over 1.5",
         odd : "1.5",
-        game_status : "not-needed"
+        game_status : "failed"
       },
       game2 : {
-       league : "Japan, J. League 2.  05:00",
-       team1 : "Team 1",
-       team2 : "Team 2",
-       price : "",
-       pick : "Pending...",
-       odd : "",
+       league : "Slovenia - Prva Liga.  15:00",
+       team1 : "NK Domzale",
+       team2 : "NK Celje",
+       price : "$240",
+       pick : "Over 1.5 & 1/2",
+       odd : "1.67",
        game_status : "not-needed"
       },
       game3 : {
