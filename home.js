@@ -1,4 +1,4 @@
-var currentDayNumber = 1, 
+var currentDayNumber = 2, 
 currentDay = document.getElementById("currentDay");
 currentDay.innerHTML = `Day ${currentDayNumber} Of 7`
 var currentPageIndex = 0,
@@ -292,7 +292,7 @@ var allWeeksGames = [
         price : "$90",
         pick : "Over 1.5",
         odd : "1.5",
-        game_status : "pending"
+        game_status : "not-needed"
       },
       game2 : {
        league : "Japan, J. League 2.  05:00",
