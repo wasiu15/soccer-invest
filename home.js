@@ -301,7 +301,7 @@ var allWeeksGames = [
        price : "",
        pick : "Pending...",
        odd : "",
-       game_status : "pending..."
+       game_status : "not-needed"
       },
       game3 : {
         league : "Japan, J. League 2.  05:00",
@@ -310,7 +310,7 @@ var allWeeksGames = [
         price : "",
         pick : "Pending...",
         odd : "",
-        game_status : "pending..."
+        game_status : "not-needed"
       }
     },
     {
