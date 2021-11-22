@@ -283,7 +283,7 @@ var allWeeksGames = [
       }
     },
     {
-      day_profit: "$",
+      day_profit: "$46",
       game1 : {
         day : "Monday 22 11 2021",
         league : "Iran - Azadegan League.  11:45",
@@ -301,7 +301,7 @@ var allWeeksGames = [
        price : "$240",
        pick : "Over 1.5",
        odd : "1.57",
-       game_status : "not-needed"
+       game_status : "finished"
       },
       game3 : {
         league : "Japan, J. League 2.  05:00",
