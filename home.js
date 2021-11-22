@@ -286,13 +286,13 @@ var allWeeksGames = [
       day_profit: "$",
       game1 : {
         day : "Monday 22 11 2021",
-        league : "Japan, J. League 2.  05:00",
-        team1 : "Team 1",
-        team2 : "Team 2",
-        price : "",
-        pick : "Pending...",
-        odd : "",
-        game_status : "not-needed"
+        league : "Iran - Azadegan League.  05:00",
+        team1 : "Arman Gohar",
+        team2 : "Qashqai Shiraz",
+        price : "$90",
+        pick : "Over 1.5",
+        odd : "1.5",
+        game_status : "pending"
       },
       game2 : {
        league : "Japan, J. League 2.  05:00",
@@ -301,7 +301,7 @@ var allWeeksGames = [
        price : "",
        pick : "Pending...",
        odd : "",
-       game_status : "not-needed"
+       game_status : "pending..."
       },
       game3 : {
         league : "Japan, J. League 2.  05:00",
@@ -310,7 +310,7 @@ var allWeeksGames = [
         price : "",
         pick : "Pending...",
         odd : "",
-        game_status : "not-needed"
+        game_status : "pending..."
       }
     },
     {
